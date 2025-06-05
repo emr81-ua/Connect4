@@ -19,15 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IA.cpp" />
-    <ClCompile Include="Juego.cpp" />
+    <ClCompile Include="AIPlayer.cpp" />
+    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Tablero.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IA.h" />
-    <ClInclude Include="Juego.h" />
-    <ClInclude Include="Tablero.h" />
+    <ClInclude Include="AIPlayer.h" />
+    <ClInclude Include="Board.h" />
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -35,7 +41,6 @@
     <ProjectGuid>{70d2df30-d2c0-4719-ad62-db7a4f55da45}</ProjectGuid>
     <RootNamespace>TicTacToe</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Connect4</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
