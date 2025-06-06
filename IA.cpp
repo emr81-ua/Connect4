@@ -80,14 +80,15 @@ int IA::evaluarTablero(const Tablero& tablero) {
         int propias = std::count(ventana.begin(), ventana.end(), jugador);
         int vacias = std::count(ventana.begin(), ventana.end(), Casilla::VACIA);
         Casilla rival = (jugador == Casilla::MAQUINA) ? Casilla::JUGADOR : Casilla::MAQUINA;
+        int rivalCount = std::count(ventana.begin(), ventana.end(), rival);
 
         if (propias == 4) score += 100;
-        else if (propias == 3 && vacias == 1) score += 10;
-        else if (propias == 2 && vacias == 2) score += 5;
+        else if (propias == 3 && vacias == 1) score += 25;
+        else if (propias == 2 && vacias == 2) score += 10;
+        else if (propias == 2 && vacias == 1 && rivalCount == 0) score += 3;
 
         // Penaliza si el rival tiene 3 en línea y una vacía
-        int rivalCount = std::count(ventana.begin(), ventana.end(), rival);
-        if (rivalCount == 3 && vacias == 1) score -= 80;
+        if (rivalCount == 3 && vacias == 1) score -= 150;
 
         return score;
         };
